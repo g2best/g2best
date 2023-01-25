@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <title>BE: Contact</title>
+  <!-- Fey, Gary, Alfredo -->  
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/form.css">
+  <!-- Font Set -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=DM+Sans&family=Montserrat:wght@600&display=swap" rel="stylesheet">   
+</head>
+<body class="form">
+   <header>    
+      <!-- Navigation menu -->
+      <nav class="navM">
+        <a href="../index.html"><img src="../images/essentialGraphics/Best_Logo_Redo_PNG.png" alt="Best Electronics Logo"></a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="pgParts.html">Products</a></li>
+            <li><a href="pgHallOfFame.html">Hall of Fame</a></li>
+            <li><a href="pgFAQ.html">FAQ</a></li>
+            <li><a href="pgContactInfo.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="mailto:be.ca@admin.com" method="post" id="form">
+        <fieldset class="pInfo">
+            <legend></legend>
+            <hgroup>
+               <h2>Your Information</h2>
+               <p>This will help us to help you?</p>
+            </hgroup>
+            <!-- ul>li*4>label+input -->                
+            <ul class="address">
+               <li class="name">
+                 <label for="name">Name</label>
+                 <input type="text" id="name" name="name" placeholder="Type your name here" required autofocus />
+               </li>
+               <li class="add2">
+                 <label for="address2">Email Address</label>
+                 <input type="text" id="address2" name="address_2" placeholder="youremail@youremail.com" required/>
+               </li>
+               <li class="city">
+                 <label for="city">Address/City</label>
+                 <input type="text" id="city" name="city" placeholder="123 street, your city" />
+               </li>
+               <li class="state">
+                 <label for="state">State</label>
+                 <input type="text" id="state" name="state" placeholder="State" required />
+               </li>
+               <li class="zip">
+                 <label for="zip_code" class="zip">Zip Code</label>
+                 <input type="text" id="zip_code" name="zip_code" placeholder="Zip Code" required />
+               </li>
+            </ul>
+        </fieldset> 
+        <hr />
+        <fieldset class="question">
+            <legend></legend>
+            <hgroup>
+                <h2>Questions?</h2>
+                <p>How we can serve you?</p>
+            </hgroup>
+            <!-- <label for="message"> Questions/Coments</label> -->
+            <textarea name="message" class="message" id="message" placeholder="write your message here" required></textarea>
+                         
+            <label for="newsletter" class="newsletter">Sign up for our e-newsletter</label>          
+            <ul class="radiolist">
+                <li class="yes"><input type="radio" id="newsletter" name="newsletter" value="yes">Yes</li>
+                 <li class="no"><input type="radio" id="newsletter" name="newsletter" value="no">No</li>
+                    
+            </ul>  
+            <input type="submit" id="submit" name="submit"  value="Let's do this!" class="button" />
+            <!-- Reset Button <input type="reset" id="reset" name="reset" value="Reset" /> -->
+        </fieldset> 
+      </form>     
+    </main>
+     <footer>
+      <p>&copy;2023 FGA:Best Electronics</p>
+    </footer>           
+</body>
+</html>

@@ -1,0 +1,285 @@
+/*-----  basic css -----*/
+
+html { font-size: 10px;
+background-color: rgba(210,227,245,.75);}
+
+body { 
+    font: 1.5rem Lucida Grade, Helvetica, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header, footer, nav {font-family: Atari, "PT Monospace", monospace; }
+h1 { font-size: 4rem; color: }
+h2 { font-size: 3rem; }
+h3 { 
+    font-size: 2.5rem; 
+    margin-bottom: 5px;
+}
+p{margin: 0 0 1em;}
+
+/*----  Header & Nav ----*/
+
+header{
+    background-image:url(../images/essentialGraphics/bannerlg.jpg);
+   /* background-color: #d2e3f5;*/
+    padding: 1em;
+    color: brown;
+    box-shadow: 0 4px 2px rgba(0,0,0,.2);    
+}
+.imgH {
+    width: auto;
+}
+.navM img{
+    width: 10em;
+    /*height: 2em; */   
+}
+
+nav { 
+    /*background-color: #d2e3f5;*/
+   background-color: rgba(210,227,245,.75);
+    color: #000;
+    /*box-shadow: 0 4px 2px rgba(0,0,0,.2);*/
+    padding: .5em;
+    margin-bottom: 1em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+/* this is at media query 440px----
+
+.navM {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navM ul {
+    display: flex;
+    justify-content: center;
+}
+.navM li {
+    margin: 0 1em;
+}
+
+nav li {
+    display: inline-block;
+} */
+
+nav a {
+    color: #008080;
+    text-decoration: none;
+    padding: 1em;
+}
+nav a:hover {
+    color: #800080;
+}
+
+/*----  main ----*/
+
+
+main {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex: 1 1 0%;
+}
+section.picSD {
+    text-align: center;
+    margin-bottom: 8em;
+}
+figure {
+    display: inline-block;
+    margin: .5em;
+    position: relative;
+}
+figcaption {
+    background-color: rgba(255,255,255,.0);
+    color: #fff;
+    padding: .5em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+main {
+    padding: 1em;
+    margin-bottom: 2em;
+    /*border-bottom: solid 1px #27868c; */
+    position: relative;
+}
+
+/*----  Sections  some of this needs to be put in the breaking points ----*/
+ 
+section {
+    border-radius: 1em;
+    border: solid 1px #999;
+    padding: .5em 0.5em;
+}
+.contact h1 {
+    color: #000;
+    font-size: 3rem;
+}
+form { color: #000;}
+/*---- articles  ----*/
+
+article {
+    background-color: #000;
+    border-radius: 5%;
+    padding: 2rem;
+}
+
+img {
+    border-radius: 50%;
+    border: solid 4px #fff;
+    box-shadow: 0 4px 4px #999;
+}
+.imgH {
+    width:200px;
+}
+
+.side1 {
+    order: -1;
+}
+
+/*----  footer ----*/
+footer {
+    background-color: #135d8a;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/*----  Media Query ----*/
+
+
+
+
+/*--------- Media Query 440px-----------*/
+
+@media screen and (max-width:812px){
+    nav {
+        line-height: 2.5rem;
+    }
+    article {
+         margin:2rem;
+    }
+}
+
+@media screen and (min-width: 440px){
+
+.secOth {
+    border-radius: 1em;
+    border: solid 1px #999;
+    padding: .5em 0.5em;
+    display:block;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;    
+} 
+
+
+
+}
+
+/*--------- Media Query 600px-----------*/
+
+@media screen and (min-width: 600px){
+    
+    /* article {
+         width: 35%;} */
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+        max-width; 300px;
+        margin: auto;
+        
+    }
+    
+    
+}
+/*--------- Media Query 810px-----------*/
+
+@media screen and (min-width: 810px){
+    
+    .navM { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navM ul {
+    display: flex;
+    justify-content: center;
+}
+.navM li {
+    margin: 0 1em;
+}
+
+nav li {
+    display: inline-block;
+}
+    
+  
+}
+
+/*--------- Media Query 1200px-----------*/
+
+@media screen and (min-width: 1200px){
+    section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    }
+     /* article {
+    width: 50%;
+    
+}*/
+    section.hom, section.con{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem; 
+        max-width: 1200px;
+        margin:auto;
+    }
+    navM {
+         min-width: 100%;
+    }
+    
+}
+
+/*
+@media screen and (min-width:800px) {
+    header > * {
+        max-width: 1200px;
+        margin: auto;
+    }
+    main section{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin:auto;        
+    }
+    section > h1 {
+        grid-column: 1/-1;
+    }
+    main article {
+        border-bottom: none;
+        border-right: solid 1px #ccc;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    main article:nth-child(even) figure{
+        order: -1;
+    }
+    main article:last-of-type{
+        border-right: none;
+        padding-right: 0;
+    }
+}
+*/
